@@ -736,7 +736,7 @@
 
 	.main-header .logo-box .logo{
 		padding: 15px 0;
-		width: 90px;
+		width: 190px;
 	}
 
 	.header-style-four.fixed-header .logo-box .logo{
@@ -780,6 +780,7 @@
 	    width: 100%;
 	    padding: 8px 0px;
 	    right: 0px;
+		margin-top: 20px;
 	}
 
 	.navbar-toggler{
