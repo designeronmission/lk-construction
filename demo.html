@@ -1,339 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>LK Construction</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">   
-<!--Color Switcher Mockup-->
-<link href="css/color-switcher-design.css" rel="stylesheet">
-<!--Color Themes-->
-<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Company - Banner with Overlay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        /* Banner One Styles */
+        .banner-one {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .banner-carousel .slide-item {
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Dark overlay for better text visibility */
+        .banner-carousel .slide-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+        
+        .auto-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+        }
+        
+        .content-box {
+            color: #fff;
+            max-width: 650px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .content-box .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #f8f8f8;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .content-box h2 {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-box .text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+        
+        .video-link a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .video-link a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .video-link i {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        
+        /* Owl Carousel Dots */
+        .owl-theme .owl-dots {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            z-index: 5;
+        }
+        
+        .owl-theme .owl-dots .owl-dot span {
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            display: block;
+            transition: opacity 0.2s ease;
+            border-radius: 50%;
+        }
+        
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: #fff;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .content-box h2 {
+                font-size: 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content-box {
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .content-box h2 {
+                font-size: 36px;
+            }
+            
+            .content-box .text {
+                font-size: 16px;
+            }
+            
+            .video-link a {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .content-box h2 {
+                font-size: 28px;
+            }
+            
+            .content-box .title {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="page-wrapper">
-    <!-- Preloader -->
-    <div class="preloader"></div>
-    
-
-      <!-- Main Header-->
-    <header class="main-header header-style-two">
-
-        <div class="header-lower">
+<!-- Banner Section -->
+<section class="banner-one banner-section-two">
+    <div class="banner-carousel owl-carousel owl-theme">
+        <!-- Slide Item -->
+        <div class="slide-item" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
             <div class="auto-container">
-                <div class="main-box clearfix">
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="assets/logo/logo-3.png" alt="" title=""></a></div>
-                    </div>
-
-                    <div class="nav-outer clearfix">
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md ">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon flaticon-menu-button"></span>
-                                </button>
-                            </div>
-                            
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="#">Home</a> </li>
-                                    <li class="current dropdown"><a href="#">About</a></li>
-                                    <li class="dropdown"><a href="#">Services</a> </li>
-                                    <li class="dropdown"><a href="#">Projects</a></li>
-                                    <li class="dropdown"><a href="#">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav><!-- Main Menu End-->                        
-
-                        <!-- Outer Box-->
-                        <div class="outer-box">
-    
-                            <!--Search Box-->
-                            <div class="search-box-outer">
-                                <div class="dropdown">
-                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                        <li class="panel-outer">
-                                            <div class="form-container">
-                                                <form method="post" action="blog.html">
-                                                    <div class="form-group">
-                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                <div class="content-box">
+                    <span class="title">Residence</span>
+                    <h2>Building Dreams <br> With Precision</h2>
+                    <div class="text">Quality construction that stands the test of time</div>
+                    <div class="video-link">
+                        <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" data-fancybox="gallery" data-caption=""><i class="icon fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sticky Header  -->
-        <div class="sticky-header">
-            <div class="auto-container clearfix">
-                <!--Logo-->
-                <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="assets/logo/logo-3.png" alt="" title=""></a>
-                </div>
-                <!--Right Col-->
-                <div class="pull-right">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->      
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon flaticon-menu-button"></span>
-                            </button>
-                        </div>
-
-                        <div class="navbar-collapse show collapse" id="navbarSupportedContent">
-                            <ul class="navigation clearfix">
-                               <li class="dropdown"><a href="#">Home</a> </li>
-                                    <li class="current dropdown"><a href="#">About</a></li>
-                                    <li class="dropdown"><a href="#">Services</a> </li>
-                                    <li class="dropdown"><a href="#">Projects</a></li>
-                                    <li class="dropdown"><a href="#">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                            </ul> 
-                        </div>
-                    </nav><!-- Main Menu End-->
-                </div>
-            </div>
-        </div><!-- End Sticky Menu -->
-    </header>
-    <!--End Main Header -->
-
-    
-    <!--Page Title-->
-    <section class="page-title" style="background-image:url(assets/banners/10.jpg);">
-        <div class="auto-container">
-            <div class="inner-container clearfix">
-                <div class="title-box">
-                    <h1>Service</h1>
-                    <span class="title">Building Excellence Since 2005</span>
-                </div>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>About Us</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
-
-    <!-- Specialize Section - Left to Right -->
-    <section class="specialize-section-two alternate">
-        <div class="auto-container">
-            <div class="row">
-                <!-- Title Column -->
-                <div class="title-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="float-text">Services</span>
-                            <h2>General Construction</h2>
-                        </div>
-
-                        <div class="text-box">
-                            <p>We specialize in delivering high-quality construction solutions for residential, commercial, and industrial projects. From concept to completion, our team ensures durability, functionality, and style in every build. Whether it's a dream home, office space, or industrial facility, we bring your vision to life.</p>
-
-                             <h4>What We Offer</h4>
-
-                             <ul>
-                                <li class="s-li"><i class="fa fa-long-arrow-right r-s"></i><strong>Residential Construction:</strong> Houses, villas, apartments.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right  r-s"></i><strong>Commercial Projects:</strong> Offices, retail spaces, warehouses.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right  r-s"></i><strong>Industrial Facilities:</strong> Factories, storage units, and plants.</li>
-                             </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Image Column -->
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <img src="assets/service/1.jpg" alt="service" class="service-images">
+        <!-- Slide Item -->
+        <div class="slide-item" style="background-image: url('https://images.unsplash.com/photo-1628744404730-5e143358539b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+            <div class="auto-container">
+                <div class="content-box">
+                    <span class="title">Construction</span>
+                    <h2>Expert Construction <br> Solutions</h2>
+                    <div class="text">From foundation to finish, we deliver excellence</div>
+                    <div class="video-link">
+                        <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" data-fancybox="gallery" data-caption=""><i class="icon fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End Specialize Section -->
 
-    <!-- Specialize Section - Right to Left -->
-    <section class="specialize-section-two alternate">
-        <div class="auto-container">
-            <div class="row flex-row-reverse">
-                <!-- Title Column -->
-                <div class="title-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="float-text">Services</span>
-                            <h2>Renovation & Remodeling</h2>
-                        </div>
-
-                        <div class="text-box">
-                            <p>Transform your property with our expert renovation and remodeling services. We handle everything from kitchen and bathroom upgrades to full-scale home extensions and office refurbishments. Our goal is to create modern, functional, and aesthetically pleasing spaces tailored to your needs.</p>
-
-                             <h4>What We Offer</h4>
-                             <ul>
-                                <li class="s-li"><i class="fa fa-long-arrow-right r-s"></i><strong> Home Renovation:</strong> Kitchen, bathroom, and living space upgrades.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right r-s"></i><strong>Additions & Extensions:</strong> Extra rooms, loft conversions, basements.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right r-s"></i><strong>Office & Shop Fit-Outs: </strong> Modern layouts tailored to your business.</li>
-                             </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Image Column -->
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <img src="assets/service/remodel.jpg" alt="service" class="service-images">
+        <!-- Slide Item -->
+        <div class="slide-item" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+            <div class="auto-container">
+                <div class="content-box">
+                    <span class="title">Residence</span>
+                    <h2>Quality Craftsmanship <br> Guaranteed</h2>
+                    <div class="text">Building relationships as strong as our structures</div>
+                    <div class="video-link">
+                        <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" data-fancybox="gallery" data-caption=""><i class="icon fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End Specialize Section -->
+    </div>
+</section>
+<!-- End Banner Section -->
 
-
-    <!-- Specialize Section - Left to Right -->
-    <section class="specialize-section-two alternate">
-        <div class="auto-container">
-            <div class="row">
-                <!-- Title Column -->
-                <div class="title-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="float-text">Services</span>
-                            <h2>Groundwork & Foundation</h2>
-                        </div>
-
-                        <div class="text-box">
-                            <p>A strong structure starts with a solid foundation. Our groundwork services cover site clearance, excavation, piling, drainage, and landscaping preparation. With precision and expertise, we ensure your project is built on safe and reliable ground.</p>
-
-                             <h4>What We Offer</h4>
-
-                             <ul>
-                                <li class="s-li"><i class="fa fa-long-arrow-right r-s"></i><strong>Site Preparation: </strong> Clearance, excavation, soil testing.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right  r-s"></i><strong>Foundation Works:</strong>Piling, raft foundations, concrete bases.</li>
-                                 <li class="s-li"><i class="fa fa-long-arrow-right  r-s"></i><strong>Drainage & Utilities:</strong>Sewage systems, water lines, landscaping prep.</li>
-                             </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Image Column -->
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <img src="assets/service/service-4.png" alt="service" class="service-images">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Specialize Section -->
-
-
-
-
-
-
-
-    
-    <!-- Main Footer -->
-    <footer class="main-footer" style="background-image: url(assets/banners/image-1.jpg);">
-        <div class="auto-container">
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row">
-                    <!--Big Column-->
-                    <div class="big-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
-                                <div class="footer-widget about-widget">
-                                    <div class="footer-logo">
-                                        <figure>
-                                            <a href="index.html"><img src="assets/logo/logo-3.png" alt=""></a>
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>   
-                            
-                                  <!--Footer Column-->
-                            <div class="footer-column col-xl-10 col-lg-10 col-md-6 col-sm-12">
-                                <div class="footer-widget about-widget">
-                                      <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><a href="#">Project</a></li>
-                                            <li><a href="#">Blogs</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.banner-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
         
-        <!--Footer Bottom-->
-        <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="inner-container clearfix">
-                    <div class="social-links">
-                        <ul class="social-icon-two">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="copyright-text">
-                        <p>Copyright © 2025 <a href="#">LK-Constructions.</a> All right reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Main Footer -->
+        // Initialize Fancybox for video popups
+        $('[data-fancybox]').fancybox({
+            youtube: {
+                controls: 0,
+                showinfo: 0
+            }
+        });
+    });
+</script>
 
-</div>
-
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-o-up"></span></div>
-<script src="js/jquery.js"></script> 
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/script.js"></script>
-<!-- Color Setting -->
-<script src="js/color-settings.js"></script>
 </body>
 </html>

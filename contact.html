@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LK Construction</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">   
+<!--Color Switcher Mockup-->
+<link href="css/color-switcher-design.css" rel="stylesheet">
+<!--Color Themes-->
+<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style>
+    /* Additional styles for centered layout and enhanced form */
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .contact-tabs {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .contact-tabs .tab-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #f1f1f1;
+        border: none;
+        margin: 0 5px;
+        cursor: pointer;
+        font-weight: 600;
+        border-radius: 5px 5px 0 0;
+    }
+    .contact-tabs .tab-btn.active {
+        background: #37990d;
+        color: white;
+    }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+
+    .contact-info-block {
+        background: #f9f9f9;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .contact-info-block h4 {
+        color: #2e86de;
+        margin-bottom: 15px;
+    }
+    .contact-info-block p, .contact-info-block a {
+        margin-bottom: 5px;
+        color: #555;
+    }
+    .map-container {
+        margin-top: 40px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+        <!-- Header content remains the same -->
+        <div class="header-lower">
+            <div class="auto-container">
+                <div class="main-box clearfix">
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="assets/logo/logo-g1.png" alt="" title=""></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md ">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon flaticon-menu-button"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown"><a href="index.html">Home</a> </li>
+                                    <li class="dropdown"><a href="about.html">About</a></li>
+                                    <li class="dropdown"><a href="service.html">Services</a> </li>
+                                    <li class="dropdown "><a href="projects.html">Projects</a></li>
+                                    <li class="dropdown"><a href="blog.html">Blog</a></li>
+                                    <li class="dropdown current"><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav><!-- Main Menu End-->                        
+
+                        <!-- Outer Box-->
+                        <div class="outer-box">
+    
+                            <!--Search Box-->
+                            <div class="search-box-outer">
+                                <div class="dropdown">
+                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                        <li class="panel-outer">
+                                            <div class="form-container">
+                                                <form method="post" action="blog.html">
+                                                    <div class="form-group">
+                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo pull-left">
+                    <a href="index.html" title=""><img src="assets/logo/logo-g1.png" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->      
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon flaticon-menu-button"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse show collapse" id="navbarSupportedContent">
+                            <ul class="navigation clearfix">
+                               <li class="dropdown"><a href="index.html">Home</a> </li>
+                                    <li class=" dropdown"><a href="about.html">About</a></li>
+                                    <li class="dropdown"><a href="service.html">Services</a> </li>
+                                    <li class="dropdown "><a href="projects.html">Projects</a></li>
+                                    <li class="dropdown"><a href="blog.html">Blog</a></li>
+                                    <li class="dropdown current"><a href="contact.html">Contact</a></li>
+                            </ul> 
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+    </header>
+    <!--End Main Header -->
+
+    
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(assets/banners/10.jpg);">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="title-box">
+                    <h1>Contact</h1>
+                    <span class="title">Building Excellence Since 2005</span>
+                </div>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Contact Page Section -->
+    <section class="contact-page-section">
+        <div class="auto-container centered-container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                    <div class="inner-column">
+
+                        <!-- Contact Tabs -->
+                        <div class="contact-tabs">
+                            <button class="tab-btn active" data-tab="basic-tab">Basic Enquiry</button>
+                            <button class="tab-btn" data-tab="advanced-tab">Advanced Enquiry</button>
+                        </div>
+
+                        <!-- Basic Enquiry Form -->
+                        <div id="basic-tab" class="tab-content active">
+                            <div class="contact-form">
+                                <form method="post" action="sendemail.php" id="basic-contact-form">
+                                    <div class="row">
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="username" placeholder="Your Name" required>
+                                          
+                                        </div>
+                                        
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="phone" placeholder="Phone Number" required>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="email" name="email" placeholder="Email Address" required>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <select name="service" required>
+                                                <option value="">Select Service</option>
+                                                <option value="residential">Residential Construction</option>
+                                                <option value="commercial">Commercial Construction</option>
+                                                <option value="renovation">Renovation</option>
+                                                <option value="consultation">Consultation</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                                            <button class="theme-btn btn-style-three" type="submit" name="submit-form">Submit Enquiry</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Enquiry Form -->
+                        <div id="advanced-tab" class="tab-content">
+                            <div class="contact-form">
+                                <form method="post" action="sendemail.php" id="advanced-contact-form">
+                                    <div class="row">
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="username" placeholder="Your Full Name" required>
+                                          
+                                        </div>
+                                        
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="company" placeholder="Company Name">
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="phone" placeholder="Phone Number" required>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="email" name="email" placeholder="Email Address" required>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <select name="project_type" required>
+                                                <option value="">Project Type</option>
+                                                <option value="new_building">New Building</option>
+                                                <option value="renovation">Renovation</option>
+                                                <option value="extension">Extension</option>
+                                                <option value="restoration">Restoration</option>
+                                            </select>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <select name="budget_range" required>
+                                                <option value="">Budget Range</option>
+                                                <option value="under_50k">Under $50,000</option>
+                                                <option value="50k_100k">$50,000 - $100,000</option>
+                                                <option value="100k_250k">$100,000 - $250,000</option>
+                                                <option value="250k_500k">$250,000 - $500,000</option>
+                                                <option value="over_500k">Over $500,000</option>
+                                            </select>
+                                          
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="timeline" placeholder="Expected Timeline (e.g., 3-6 months)">
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                            <input type="text" name="location" placeholder="Project Location">
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <textarea name="project_details" placeholder="Project Details & Requirements" rows="5"></textarea>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <div class="file-upload-wrapper">
+                                                <label>Upload Plans or Sketches (if any)</label>
+                                                <input type="file" name="project_files" multiple>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                                            <button class="theme-btn btn-style-three" type="submit" name="submit-form">Submit Detailed Enquiry</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Contact Page Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer" style="background-image: url(assets/banners/image-1.jpg);">
+        <div class="auto-container">
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row">
+                    <!--Big Column-->
+                    <div class="big-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="row">
+                            <!--Footer Column-->
+                            <div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
+                                <div class="footer-widget about-widget">
+                                    <div class="footer-logo">
+                                        <figure>
+                                            <a href="index.html"><img src="assets/logo/logo-g1.png" alt=""></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>   
+                            
+                                  <!--Footer Column-->
+                            <div class="footer-column col-xl-10 col-lg-10 col-md-6 col-sm-12">
+                                <div class="footer-widget about-widget">
+                                      <div class="widget-content">
+                                        <ul class="list">
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Project</a></li>
+                                            <li><a href="#">Blogs</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Footer Bottom-->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+                    <div class="social-links">
+                        <ul class="social-icon-two">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="copyright-text">
+                        <p>Copyright © 2025 <a href="#">LK-Constructions.</a> All right reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+
+</div>
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-o-up"></span></div>
+<script src="js/jquery.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/script.js"></script>
+<!-- Color Setting -->
+<script src="js/color-settings.js"></script>
+
+<script>
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Form validation
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = '#e74c3c';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                if (isValid) {
+                    // Form is valid, you would typically submit via AJAX here
+                    alert('Thank you for your enquiry! We will contact you shortly.');
+                    form.reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
